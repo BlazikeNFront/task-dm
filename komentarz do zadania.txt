@@ -1,0 +1,10 @@
+Gdybym miał więcej czasu, pomyślałbym o stworzeniu komponentu, który umożliwia automatyczną walidację całego formularza poprzez wywołanie jednej metody.
+<template>
+ <form>
+	<slot />
+ </ form>
+</template>
+taki komponent miałby jedną funkcję walidacji ("publiczną" poprzez defineExpose), której zadaniem byłoby
+sprawdzenie komponentow w  slocie za pomocą useSlots(), a następnie wywołałaby  funkcje walidacji dla pojedynczych elementów.
+Wydaje mi się jednak, że wymagałoby to napisania dużej ilości logiki reużywalnych komponentów formularzy w OptionsAPI (
+z tego zauważyłem to nie można używać logiki komponentów napisanych w script setup w slotach (przynajmniej mi się nie udało do nich dostać... :) )

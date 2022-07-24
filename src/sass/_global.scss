@@ -1,0 +1,46 @@
+
+//font
+$primary-font: 'Montserrat', sans-serif;
+
+//COLORS
+$grey: #bab8b8;
+$blue:#4287f5;
+$red:#f04242;
+$disabled-input:#f2f2f2;
+$select-option-active:#cee0fd;
+$select-option-hover:#b6d1fc;
+
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: $primary-font;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+
+}
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  
+}
+ol, ul {
+  list-style: none;
+}
+button {
+  font-family: $primary-font;
+}
+input {
+    all:unset;
+    box-sizing: border-box;
+}
+
+@mixin flexBox($align,$justify,$direction){
+display: flex;
+align-items:$align;
+justify-content:$justify;
+flex-direction:$direction;
+}
